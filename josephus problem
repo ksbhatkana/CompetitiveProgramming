@@ -1,0 +1,6 @@
+int jos(int n, int k)
+{
+    if(n==1)                    #i.e, if he is the only person, he is the winner
+        return 0;
+    return (jos(n-1,k)+k)%n ;   #Difference between jos(n,k) when 1 person killed and jos(n-1,k) is gun will be in kth person's hand in 1st case and 0th person's hand in latter case. To equate both, k is added. i.e, root strength of recusrion approach is reducing bigger problem into smaller itself. 
+}
