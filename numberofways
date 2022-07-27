@@ -1,0 +1,4 @@
+int count(int m, int n){                        # m rows, n columns
+    if(m==1 || n==1)                            # ie, if we reach last row or last column, only 1 way left to reach end point
+        return 1;
+    return count(m-1, n) + count(m, n-1)        # make it to reach last row, or last column and add them to get total count
