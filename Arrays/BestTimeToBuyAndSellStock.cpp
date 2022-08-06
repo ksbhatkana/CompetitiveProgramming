@@ -1,3 +1,4 @@
+// We can buy and sell stock only once
 class Solution {
 public:
     int maxProfit(vector<int>& prices) {
