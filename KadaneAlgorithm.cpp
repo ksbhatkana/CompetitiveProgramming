@@ -13,3 +13,5 @@ public:
         return maxSum;
     }
 };
+
+//Kadane's algorithm is used to find longest subarray sum.
