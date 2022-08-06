@@ -1,0 +1,21 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+bool isPalim(string s, int l, int r)
+{
+	if(l>=r)
+    {
+      	return true;
+    }
+    if(s[l]!=s[r])
+        return false;
+  	return isPalim(s,l+1,r-1);
+}
+
+// Driver program to test above function
+int main()
+{
+	string s = "abba";
+  	cout<<isPalim(s,0, s.size()-1)<<endl;
+	return 0;
+}
