@@ -6,7 +6,7 @@ void subString(string s, int n, string cur)
       	return;
     }
   	subString(s,n+1,cur+s[n]);
-  	subString(s,n+1,cur);
+  	subString(s,n+1,cur);		// Because for every possibility we can either select that character or not
 }
 
 // Driver program to test above function
