@@ -1,3 +1,4 @@
+//This solution solves problem in O(n) time complexity and O(1) space complexity
 class Solution {
 public:
     int majorityElement(vector<int>& nums) {
