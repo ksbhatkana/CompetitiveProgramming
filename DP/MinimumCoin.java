@@ -1,10 +1,8 @@
 class Solution {
     public int coinChange(int[] coins, int amount) {
         int res[] = new int[amount+1];
-        Arrays.fill(res,0);
+        Arrays.fill(res,Integer.MAX_VALUE);
         res[0]=0;
-        for(int i=1;i<=amount;i++)
-            res[i] = Integer.MAX_VALUE;
         for (int i=0; i<=amount; i++)
             for (int j=0; j<coins.length; j++){
                 if(coins[j]<=i){
