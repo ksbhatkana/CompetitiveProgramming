@@ -1,3 +1,7 @@
+# Time Complexity: 𝑂(𝑁×𝑀) in worst case
+# Space Complexity: O(N×M) in worst case
+
+
 def flood_fill_dfs(image, sr, sc, newColor):
     rows, cols = len(image), len(image[0])
     original_color = image[sr][sc]
