@@ -1,6 +1,7 @@
 # Time Complexity: 𝑂(𝑁×𝑀) in worst case
 # Space Complexity: O(N×M) in worst case
-
+# DFS naturally follows a recursive "spread-out" pattern that mimics how the fill propagates in an image. A recursive function is easy to implement and closely resembles how a color change would "spread" in connected pixels. It eliminates the need for a queue management system (which BFS requires).
+# If the flood fill region is very large (e.g., filling an entire 1000 × 1000 grid), DFS can cause stack overflow due to deep recursion. BFS avoids this issue because it uses an explicit queue instead of recursion.
 
 def flood_fill_dfs(image, sr, sc, newColor):
     rows, cols = len(image), len(image[0])
