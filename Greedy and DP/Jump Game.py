@@ -4,6 +4,8 @@
 #The greedy approach dynamically updates the max reachable index as it iterates through the array.
 # It terminates early if it becomes clear that the last index is reachable.
 
+#DP has TC O(N^2) and SC O(N) where GP has TC O(N) and SC O(1)
+
 class Solution:
     def canJump(self, nums: List[int]) -> bool:
         max_reach = 0
