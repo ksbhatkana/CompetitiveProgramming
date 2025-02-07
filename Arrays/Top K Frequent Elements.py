@@ -22,6 +22,12 @@
 # Building a heap of size k (heapq.nlargest())	O(N log k)	Uses a Min-Heap of size k, which is more efficient than full sorting.
 # Total Complexity	O(N log k)	Faster than sorting (O(N log N)).
 
+# Breaking it Down:
+# First Argument (k) → The number of top elements to return.
+# Second Argument (map_key.keys()) → The list of unique elements (keys from the frequency dictionary).
+# Third Argument (map_key.get) → The function used to rank elements (based on frequency).
+# map_key.get Determines Which Element is Considered as the Largest
+
 class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         map_key = Counter(nums)
