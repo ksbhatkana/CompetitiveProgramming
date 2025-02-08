@@ -32,3 +32,40 @@ class Solution:
     def topKFrequent(self, nums: List[int], k: int) -> List[int]:
         map_key = Counter(nums)
         return heapq.nlargest(k, map_key.keys(), map_key.get)
+
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        count = {}
+        freq = [[] for i in range(len(nums) + 1)]
+        
+        # Count the occurrences of each number
+        for n in nums:
+            count[n] = 1 + count.get(n, 0)
+        
+        # Place numbers into the bucket based on their frequency
+        for n, c in count.items():
+            freq[c].append(n)
+
+        # Collect the top K frequent elements
+        res = []
+        for i in range(len(freq) - 1, 0, -1):  # Iterate from highest frequency to lowest
+            for n in freq[i]:
+                res.append(n)
+                if len(res) == k:
+                    return res
+
+# Best solution
+class Solution:
+    def topKFrequent(self, nums: List[int], k: int) -> List[int]:
+        count = Counter(nums)
+        bucket = defaultdict(list)
+
+        for num, freq in count.items():
+            bucket[freq].append(num)
+
+        res = []
+        for i in range(len(nums)+1, 0, -1):
+            if bucket[i]:
+                res.extend(bucket[i])
+            if len(res) >= k:
+                return res[:k]
