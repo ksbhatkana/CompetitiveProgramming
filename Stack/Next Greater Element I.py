@@ -27,6 +27,8 @@
 
 # Follow up: Could you find an O(nums1.length + nums2.length) solution?
 
+Time Complexity: 𝑂(𝑁+𝑀) Space Complexity: 𝑂(𝑁+𝑀)
+
 class Solution:
     def nextGreaterElement(self, nums1: List[int], nums2: List[int]) -> List[int]:
         stack = []
